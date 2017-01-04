@@ -6,7 +6,7 @@ class Signin extends Component {
 	handleFormSubmit({ email, password }) {
 		console.log(email, password);
 		//need to do something to log user in
-		actions.signinUser({ email, password });
+		this.props.signinUser({ email, password });
 	}
 	render() {
 		const { handleSubmit, fields: {email, password }} = this.props;
