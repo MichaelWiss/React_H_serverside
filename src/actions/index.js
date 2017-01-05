@@ -13,6 +13,7 @@ export function signinUser({ email, password }) {
          //update state
          dispatch({ type: AUTH_USER });
 	     //save JWT token
+	     localStorage.setItem('token', response.data.token);
 	     //redirect to route '/feature'
 	     browserHistory.push('/feature');
        })
