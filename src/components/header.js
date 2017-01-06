@@ -25,9 +25,9 @@ class Header extends Component {
 
 	render() {
 		return (
-			 <nav className="navbar navbar-default bg-faded">
+			 <nav className="navbar navbar-light bg-faded">
 			  <Link to="/" className="navbar-brand">Redux Auth</Link>
-			   <ul className="nav navbar-nav">
+			   <ul className="nav navbar-nav ">
 			     {this.renderLinks()}
                </ul>
              </nav>
@@ -41,4 +41,4 @@ function mapStateToProps(state) {
 	};
 }
 
-export default connect() (Header);
+export default connect(mapStateToProps) (Header);
