@@ -10,8 +10,17 @@ class Signup extends Component {
 		  <form>
 		    <fieldset className="form-group">
 		      <label>Email:</label>
-		      <input
+		      <input className="form-control" {...email} />
             </fieldset>
+            <fieldset className="form-group">
+		      <label>Password:</label>
+		      <input className="form-control" {...password} type="password"/>
+            </fieldset>
+            <fieldset className="form-group">
+		      <label>Confirm Password:</label>
+		      <input className="form-control" {...passwordConfirm} type="password"/>
+            </fieldset>
+            <button action="submit" className="btn btn-primary">Sign Up!</button>
 		  </form>
 		);
 	}
@@ -20,4 +29,4 @@ class Signup extends Component {
 export default reduxForm({
 	form: 'signup',
 	fields: ['email', 'password', 'passwordConfirm']
-}) Signup;
+}) (Signup);
