@@ -4,10 +4,20 @@ import * as actions from '../../actions';
 
 class Signup extends Component {
 	render() {
+		const { handleSubmit, fields: { email, password, passwordConfirm }} = this.props;
+
 		return (
-			<div>Signup</div>
+		  <form>
+		    <fieldset className="form-group">
+		      <label>Email:</label>
+		      <input
+            </fieldset>
+		  </form>
 		);
 	}
 }
 
-export default Signup;
+export default reduxForm({
+	form: 'signup',
+	fields: ['email', 'password', 'passwordConfirm']
+}) Signup;
