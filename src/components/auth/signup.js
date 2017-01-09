@@ -36,7 +36,7 @@ class Signup extends Component {
 function validate(formProps) {
      const errors = {};
 
-     if (formProps.email) {
+     if (!formProps.email) {
      	errors.email = 'Please enter an email';
      }
 
@@ -61,4 +61,7 @@ export default reduxForm({
 	form: 'signup',
 	fields: ['email', 'password', 'passwordConfirm'],
 	validate
-}) (Signup);
+}, null, actions) (Signup);
+
+
+
