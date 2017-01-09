@@ -51,6 +51,16 @@ export function authError(error) {
 export function signoutUser() {
 	localStorage.removeItem('token');
 	return {
-		type: UNAUTH_USER,
+		type: UNAUTH_USER };
+}
+
+export function fetchMessage() {
+	return function(dispatch) {
+		axios.get(ROOT_URL)
+		  .then(response => {
+		  	console.log(response);
+		  })
 	}
 }
+
+
